@@ -1,38 +1,226 @@
-.App {
-  text-align: center;
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
+    body {
+      background-image: url('./images/bg-main-desktop.png');
+      background-repeat: no-repeat;
+      overflow-x: hidden;
+      display:flex;
+      justify-content: center;
+    }
+.App{
+  display:flex;
+  gap:127px;
   min-height: 100vh;
-  display: flex;
+  max-width:1049px;
+}
+
+.cards {
+  width: 541px;
+  margin-top:7%;
+  display:flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  /* margin-left:7%; */
+}
+#c1 {
+  background-image: url('./images/bg-card-front.png');
+  background-size: cover;
+  width: 447px;
+  height: 245px;
+  position:relative;
   color: white;
 }
-
-.App-link {
-  color: #61dafb;
+#outer {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  position: absolute;
+  bottom: 0;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+#c1 div {
+  height: 50%;
+}
+
+#c1 svg {
+  margin: 5%;
+}
+
+#num {
+  font-size: 28px;
+  padding-bottom: 5%;
+  letter-spacing: 3.422px;
+}
+
+#flex1 {
+  display: flex;
+  justify-content: space-between;
+}
+
+#c2 {
+  background-image: url('./images/bg-card-back.png');
+  background-size: cover;
+  width: 447px;
+  height: 245px;
+  position:relative;
+  margin-left:94px;
+  margin-top:37px;
+}
+
+#c2 p {
+  position: absolute;
+  top: 45%;
+  right: 10%;
+}
+
+
+
+form{
+  display:flex;
+  flex-direction: column;
+  margin-top:15%;
+  width: 381px;
+  
+
+}
+
+form > input, form button{
+  width: 381px;
+  margin-bottom:20px;
+}
+#m,#y{
+  width: 80px;
+}
+.cvc{
+  width:191px;
+}
+.flex{
+  display:flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+  
+}
+#frow{
+  display:flex;
+  justify-content: space-between;
+  padding-bottom:10px;
+}
+form button{
+  padding:10px;
+}
+input{
+  /* width: 381px; */
+    height: 45px;
+    border-radius: 8px;
+      border: 1px solid  #DFDEE0;
+      background:  #FFF;
+
+  color: var(--Deep-Violet, #21092F);
+    font-feature-settings: 'clig' off, 'liga' off;
+    font-size: 18px;
+    font-weight: 500;
+    padding-left:5px;
+}
+input::placeholder{
+  color: #21092F;
+    font-feature-settings: 'clig' off, 'liga' off;
+    font-size: 18px;
+    font-weight: 500;
+    opacity: 0.25;
+}
+label{
+  padding-bottom:10px;
+}
+button{
+  width: 381px;
+    height: 53px;
+    border-radius: 8px;
+      background:  #21092F;
+      font-feature-settings: 'clig' off, 'liga' off;
+      font-size: 18px;
+      font-weight: 500;
+      color:  #FFF;
+} 
+
+.complete{
+  display:flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom:48px;
+}
+.complete img{
+  margin-bottom:35px;
+}
+.complete h1{
+  color: var(--Deep-Violet, #21092F);
+    text-align: center;
+    font-feature-settings: 'clig' off, 'liga' off;
+    font-size: 28px;
+    font-weight: 500;
+    letter-spacing: 3.422px;
+    padding-bottom:10px;
+}
+.complete p{
+  color: var(--Purplish-Grey, #8F8694);
+    text-align: center;
+    font-feature-settings: 'clig' off, 'liga' off;
+    font-size: 18px;
+    font-weight: 500;
+
+}
+
+@media (max-width:1100px){
+  .App{
+    gap:0px;
   }
-  to {
-    transform: rotate(360deg);
+  #c1,#c2{
+    width: 285px;
+      height: 156.208px;
   }
+    #num {
+      font-size: 18px;padding-bottom: 5%;
+      letter-spacing: 2.2px;
+    }
+}
+
+@media (max-width:1062px) {
+  body{
+    background-image: url('./images/bg-main-mobile.png');
+    background-position: center top;
+  }
+.App {
+    flex-direction: column;
+    gap:0;
+    align-items: center;
+  }
+  .cards{
+    flex-direction: column-reverse;
+    margin-top:0;
+    width: 375px;
+  }
+  #c1{
+    margin-left:17px;
+    transform: translateY(-30%);
+    z-index:999;
+  }
+  #c2{
+    /* margin-right:17px; */
+    margin-left:73px;
+    z-index:1;
+  }
+  form{
+    margin-top:48px;
+  }
+ form,form>input,
+ form button{
+    width: 327px;
+  }
+  #m,#y{
+    width: 72px;
+  }
+    .cvc {
+      width: 164px;
+    }
 }
